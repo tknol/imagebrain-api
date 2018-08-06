@@ -8,7 +8,7 @@ const db = knex({
   client: 'pg',
   connection: {
     host : '127.0.0.1',
-    user : 'someone',
+    user : 'brain',
     password : '',
     database : 'smart-brain'
   }
@@ -18,6 +18,8 @@ const app = express();
 
 app.use(cors())
 app.use(bodyParser.json());
+
+//db.('users').insert({title: 'Slaughterhouse Five'})
 
 app.get('/', (req, res)=> {
   res.send(database.users);
